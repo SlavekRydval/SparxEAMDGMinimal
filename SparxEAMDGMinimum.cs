@@ -114,7 +114,7 @@ namespace MDGMinimum
             {
                 case "IconID": return System.Reflection.Assembly.GetExecutingAssembly().Location + "#ico";
                 case "Language": return "";
-                case "HiddenMenus": return EA.MDGMenus.mgBuildProject & EA.MDGMenus.mgMerge & EA.MDGMenus.mgRun;
+                case "HiddenMenus": return EA.MDGMenus.mgBuildProject | EA.MDGMenus.mgMerge | EA.MDGMenus.mgRun;
                 default: throw new NotImplementedException($"MDG_GetProperty (name=={PropertyName})");
             }
         }
